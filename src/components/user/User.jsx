@@ -1,7 +1,12 @@
 
 import './User.css';
-export default function User({user}) {
+import Button from '../Button/Button';
 
+export default function User({user, clickHandler}) {
+
+    const defaultUser = {id: '', name: '', username: '', img: ''}
+    user = user ?? defaultUser
+    
     let {id, name, username, img} = user
 
     return (
@@ -21,7 +26,10 @@ export default function User({user}) {
 
             </div>
 
-            <button className='payment-btn'>Pagar</button>
+            <Button 
+            clickHandler={e => { if(clickHandler){clickHandler(user) } }}>
+                Pagar
+            </Button>
 
         </div>
     )

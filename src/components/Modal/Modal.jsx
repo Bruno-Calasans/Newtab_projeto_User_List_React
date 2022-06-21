@@ -1,27 +1,40 @@
 import './Modal.css'
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-const Modal = ({titleMsg, titleMore, children}) => {
+const Modal = ({titleMsg, children, closeHandler}) => {
 
+    let [hidden, setHidden] = useState(false)
     const modal = useRef(null)
 
-    function close(){ modal.current.style.display = 'none' }
-    function open(){ modal.current.style.display = 'flex' }
+    useEffect(() => {
+
+        if(hidden) {
+            modal.current.style.display = 'none'
+
+        }else {
+            modal.current.style.display = 'flex'
+        }
+
+    }, [hidden])
 
     return (
+
         <div className='modal' ref={modal}>
 
             <div className='modal-title'>
-                <div className='title-msg'>{titleMsg} {titleMore}</div>
-                <div className="close-btn" onClick={e => close()}>x</div>
+                <div className='title-msg'>{titleMsg}</div>
+                <div className="close-btn" 
+                onClick={e => {
+
+                    // função que será chamada toda vez que fechar o modal
+                    if(closeHandler) { closeHandler() }
+                    setHidden(true)
+
+                }}>x</div>
             </div>
 
             <div className='modal-content'>
-                <input type="text" name="" id="" placeholder='Exemplo'/>
-                <input type="text" name="" id="" placeholder='Exemplo'/>
-                <input type="text" name="" id="" placeholder='Exemplo'/>
-                <input type="text" name="" id="" placeholder='Exemplo'/>
-                <input type="text" name="" id="" placeholder='Exemplo'/>
+                {children}
             </div>
 
         </div>
