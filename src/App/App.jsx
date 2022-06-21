@@ -1,8 +1,8 @@
 import UserList from '../components/User_list/User_list.jsx'
-import PaymentModal from '../components/Payment_modal/Payment_modal.jsx'
-import SuccessModal from '../components/Success_modal/Success_modal.jsx'
-import FailModal from '../components/Fail_modal/Fail_modal.jsx'
-import Highlight from '../components/Highlight/Highlight.jsx'
+import PaymentModal from '../components/Payment_modal/PaymentModal.jsx'
+import SuccessModal from '../components/Success_modal/SuccessModal.jsx'
+import FailModal from '../components/Fail_modal/FailModal.jsx'
+import Highlight from ',./components/Highlight/Highlight.jsx'
 import { useState } from 'react';
 
 const userURL = 'https://www.mocky.io/v2/5d531c4f2e0000620081ddce'
