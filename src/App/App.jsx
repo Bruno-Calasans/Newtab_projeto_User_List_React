@@ -1,4 +1,4 @@
-import UserList from '../components/User_list/UserList.jsx'
+import UserList from '../components/UserList/UserList.jsx'
 import PaymentModal from '../components/Payment_modal/PaymentModal.jsx'
 import SuccessModal from '../components/Success_modal/SuccessModal.jsx'
 import FailModal from '../components/Fail_modal/FailModal.jsx'
