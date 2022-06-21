@@ -1,4 +1,4 @@
-import UserList from '../components/UserList/UserList.jsx'
+import UsersList from '../components/UserList/UsersList.jsx'
 import PaymentModal from '../components/Payment_modal/PaymentModal.jsx'
 import SuccessModal from '../components/Success_modal/SuccessModal.jsx'
 import FailModal from '../components/Fail_modal/FailModal.jsx'
@@ -100,7 +100,7 @@ export default function App(){
 
         <div className="app">
 
-            <UserList url={userURL} clickHandler={toggleUser}/>
+            <UsersList url={userURL} clickHandler={toggleUser}/>
 
             {
                 openedPaymentModal &&

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import User from '../User/User.jsx';
 
-export default function UserList({url, clickHandler}) {
+export default function UsersList({url, clickHandler}) {
 
     let [users, setUsers] = useState(null)
 
