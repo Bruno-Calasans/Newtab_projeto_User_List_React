@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import User from '../User/User.jsx';
+import User from '../User';
 
 export default function UsersList({url, clickHandler}) {
 
