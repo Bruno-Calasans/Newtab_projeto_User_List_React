@@ -6,14 +6,14 @@ import Button from "../Button/Button"
 export default function PaymentModal({
     children, 
     closeHandler, 
-    inputHandler, 
+    changeHandler, 
     clickHandler
 }) {
 
     return (
         <Modal titleMsg={children} closeHandler={closeHandler}>
 
-            <Input changeHandler={inputHandler}/>
+            <Input changeHandler={changeHandler}/>
 
             <Select>
                 {[
